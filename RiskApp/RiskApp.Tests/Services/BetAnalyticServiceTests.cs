@@ -9,15 +9,15 @@ using RiskApp.Core.Services;
 namespace RiskApp.Tests.Services
 {
     [TestFixture]
-    public class UnusualBetDetectorTests
+    public class BetAnalyticServiceTests
     {
         [Test, TestCaseSource("GetTestData")]
-        public void The_method_FindUnusualBet_should_identify_user_with_unusual_bet(IEnumerable<SettledBet> bets)
+        public void The_method_GetReport_should_identify_user_with_unusual_bet(IEnumerable<SettledBet> bets)
         {
-            var svc = new UnusualBetDetector();
+            var svc = new BetAnalyticService();
 
             // Action
-            var result = svc.FindUnusualBet(bets).ToList();
+            var result = svc.GetReport(bets).ToList();
 
             // Assert
             Assert.AreEqual(6, result.Count);

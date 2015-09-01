@@ -1,8 +1,8 @@
-﻿using System;
-using System.Web;
+﻿using System.Web;
 using Autofac;
 using RiskApp.Core.Data;
 using RiskApp.Core.Services;
+using RiskApp.Core.Services.RiskDetector;
 
 namespace RiskApp
 {
@@ -17,9 +17,27 @@ namespace RiskApp
                 .SingleInstance();
 
             builder
+                .RegisterType<BetAnalyticService>()
+                .AsImplementedInterfaces()
+                .SingleInstance();
+
+
+            builder
+                .RegisterType<RiskyBetDetector>()
+                .AsImplementedInterfaces()
+                .SingleInstance();
+
+            builder
                 .RegisterType<UnusualBetDetector>()
                 .AsImplementedInterfaces()
                 .SingleInstance();
+
+            builder
+                .RegisterType<BigBetDetector>()
+                .WithParameter(new NamedParameter("threshold", 1000))
+                .AsImplementedInterfaces()
+                .SingleInstance();
+            
         }
     }
 }

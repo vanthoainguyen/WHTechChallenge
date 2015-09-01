@@ -6,6 +6,6 @@ namespace RiskApp.Core.Services
     public interface IBetService
     {
         IEnumerable<SettledBet> GetSettledBet();
-        IEnumerable<UnsettledBet> GetUnsettledBetBet();
+        IEnumerable<UnsettledBet> GetUnsettledBet();
     }
 }

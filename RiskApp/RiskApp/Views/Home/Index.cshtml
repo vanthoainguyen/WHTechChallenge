@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-@model IEnumerable<RiskApp.Core.Models.UnusualBetViewModel>
+@model IEnumerable<RiskApp.Core.Models.SettledBetReport>
 
 
 <style>
@@ -19,7 +19,7 @@
         min-width: 100px;
     }
 </style>
-<h2>Won bets at an unusual rate</h2>
+<h2>Won bets at an unusual rate - To @Html.ActionLink("risky bets", "Risky")</h2> 
 @foreach (var user in Model)
 {
     <h3 class="@(user.IsUnusual ? "unusual" : "normal")">USER @user.CustomerId 

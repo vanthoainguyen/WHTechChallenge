@@ -2,11 +2,12 @@
 
 namespace RiskApp.Core.Models
 {
-    public class UnusualBetViewModel
+    public class SettledBetReport
     {
         public int CustomerId { get; set; }
         public bool IsUnusual { get; set; }
         public List<SettledBet> HistoricalBets { get; set; }
         public double WinRate { get; set; }
+        public double AvgStake { get; set; }
     }
 }

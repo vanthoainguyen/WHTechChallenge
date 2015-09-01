@@ -28,7 +28,7 @@ namespace RiskApp.Core.Data
             });
         }
 
-        public IEnumerable<UnsettledBet> GetUnsettledBetBet()
+        public IEnumerable<UnsettledBet> GetUnsettledBet()
         {
             var lines = File.ReadAllLines(Path.Combine(_basePath, "Unsettled.csv")).Skip(1);
             return lines.Select(line => line.Split(',')).Select(terms => new UnsettledBet

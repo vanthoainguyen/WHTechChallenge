@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model IEnumerable<RiskApp.Core.Models.RiskyBet>
+
+
+<style>
+     .risky {
+         color: red;
+     }
+    td {
+        min-width: 100px;
+    }
+</style>
+<h2>Risky bets - To @Html.ActionLink("unusual bets", "Index")</h2>
+
+    
+<table>
+    <tr>
+        <td>CustomerId</td>
+        <td>Event</td>
+        <td>Participant</td>
+        <td>Stake</td>
+        <td>Win</td>
+        <td>RiskTypes</td>
+    </tr>
+    @foreach (var bet in Model)
+    {
+        <tr class="@(bet.IsRisky() ? "risky" : "none") ">
+            <td>@bet.CustomerId</td>
+            <td>@bet.Event</td>
+            <td>@bet.Participant</td>
+            <td>@bet.Stake</td>
+            <td>@bet.ToWin</td>
+            <td>@bet.GetRiskReport()</td>
+        </tr>    
+    }
+</table>    
+
+
