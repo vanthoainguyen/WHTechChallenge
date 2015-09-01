@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RiskApp.Core.Models;
 
 namespace RiskApp.Core.Services
@@ -8,7 +9,7 @@ namespace RiskApp.Core.Services
     {
         public IEnumerable<Tuple<SettledBet, bool>> FindUnusualBet(IEnumerable<SettledBet> settledBets)
         {
-            yield break;
+            return settledBets.Select(x => new Tuple<SettledBet, bool>(x, true));
         }
     }
 }

@@ -3,6 +3,16 @@
 }
 @model IEnumerable<Tuple<RiskApp.Core.Models.SettledBet, bool>>
 
+
+<style>
+    .unusual-bet {
+        background-color: orange;
+    }
+
+    td {
+        min-width: 100px;
+    }
+</style>
 <h2>Won bets at an unusual rate</h2>
 <table>
     <tr>

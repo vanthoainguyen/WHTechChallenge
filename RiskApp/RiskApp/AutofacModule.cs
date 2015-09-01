@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿using System;
+using System.Web;
+using Autofac;
 using RiskApp.Core.Data;
 using RiskApp.Core.Services;
 
@@ -10,6 +12,7 @@ namespace RiskApp
         {
             builder
                 .RegisterType<CsvBetService>()
+                .WithParameter(new NamedParameter("basePath", HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data")))
                 .AsImplementedInterfaces()
                 .SingleInstance();
 

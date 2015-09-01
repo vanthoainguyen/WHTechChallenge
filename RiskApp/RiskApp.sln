@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp.Core", "RiskApp.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp.Core.Data", "RiskApp.Core.Data\RiskApp.Core.Data.csproj", "{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp.Tests", "RiskApp.Tests\RiskApp.Tests.csproj", "{3A72F4F1-6DE0-44E1-BDD2-8997A0D45F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A72F4F1-6DE0-44E1-BDD2-8997A0D45F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A72F4F1-6DE0-44E1-BDD2-8997A0D45F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A72F4F1-6DE0-44E1-BDD2-8997A0D45F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A72F4F1-6DE0-44E1-BDD2-8997A0D45F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
