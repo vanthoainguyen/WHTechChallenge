@@ -21,12 +21,12 @@ namespace RiskApp.Tests.Services
 
             // Assert
             Assert.AreEqual(6, result.Count);
-            Assert.IsTrue(result[0].IsUnusual && result[0].CustomerId == 1);
-            Assert.IsTrue(!result[1].IsUnusual && result[1].CustomerId == 2);
-            Assert.IsTrue(!result[2].IsUnusual && result[2].CustomerId == 3);
-            Assert.IsTrue(result[3].IsUnusual && result[3].CustomerId == 4);
-            Assert.IsTrue(!result[4].IsUnusual && result[4].CustomerId == 5);
-            Assert.IsTrue(result[5].IsUnusual && result[5].CustomerId == 6);
+            Assert.IsTrue(result[0].IsUnusual && result[0].CustomerId == 1 && result[0].AvgStake == 49.0);
+            Assert.IsTrue(!result[1].IsUnusual && result[1].CustomerId == 2 && result[1].AvgStake == 12.5);
+            Assert.IsTrue(!result[2].IsUnusual && result[2].CustomerId == 3 && result[2].AvgStake == 36.7);
+            Assert.IsTrue(result[3].IsUnusual && result[3].CustomerId == 4 && result[3].AvgStake == 174.4);
+            Assert.IsTrue(!result[4].IsUnusual && result[4].CustomerId == 5 && result[4].AvgStake == 20.7);
+            Assert.IsTrue(result[5].IsUnusual && result[5].CustomerId == 6 && result[5].AvgStake == 48.0);
         }
 
         private IEnumerable<IEnumerable<SettledBet>> GetTestData()
