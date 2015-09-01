@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model IEnumerable<Tuple<RiskApp.Core.Models.SettledBet, bool>>
+
+<h2>Won bets at an unusual rate</h2>
+<table>
+    <tr>
+        <td>Customer</td>
+        <td>Event</td>
+        <td>Participant</td>
+        <td>Stake</td>
+        <td>Win</td>
+    </tr>
+    @foreach(var bet in Model)
+    {
+        <tr class="@(bet.Item2 ? "unusual-bet" : "normal-bet") ">
+            <td>@bet.Item1.CustomerId</td>
+            <td>@bet.Item1.Event</td>
+            <td>@bet.Item1.Participant</td>
+            <td>@bet.Item1.Stake</td>
+            <td>@bet.Item1.Win</td>
+        </tr>    
+    }
+</table>
+

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp", "RiskApp\RiskApp.csproj", "{55EFEF0C-2642-4553-9699-60C80C429FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp.Core", "RiskApp.Core\RiskApp.Core.csproj", "{BED8D8AD-BA43-4A9B-B8BA-4A8D2187D8F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApp.Core.Data", "RiskApp.Core.Data\RiskApp.Core.Data.csproj", "{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55EFEF0C-2642-4553-9699-60C80C429FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EFEF0C-2642-4553-9699-60C80C429FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EFEF0C-2642-4553-9699-60C80C429FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EFEF0C-2642-4553-9699-60C80C429FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED8D8AD-BA43-4A9B-B8BA-4A8D2187D8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED8D8AD-BA43-4A9B-B8BA-4A8D2187D8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED8D8AD-BA43-4A9B-B8BA-4A8D2187D8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED8D8AD-BA43-4A9B-B8BA-4A8D2187D8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FDD3E9-CA63-49AC-A0F4-6F624C5A9AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
