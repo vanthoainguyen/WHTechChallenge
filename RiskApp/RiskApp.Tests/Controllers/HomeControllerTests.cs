@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using NSubstitute;
@@ -19,17 +18,17 @@ namespace RiskApp.Tests.Controllers
             // Arrange
             var betService = Substitute.For<IBetService>();
             var unusualBetDetector = Substitute.For<IUnusualBetDetector>();
-            unusualBetDetector.FindUnusualBet(Arg.Any<IEnumerable<SettledBet>>()).Returns(new List<Tuple<SettledBet, bool>>
+            unusualBetDetector.FindUnusualBet(Arg.Any<IEnumerable<SettledBet>>()).Returns(new List<UnusualBetViewModel>
             {
-                new Tuple<SettledBet, bool>(new SettledBet(), true),
-                new Tuple<SettledBet, bool>(new SettledBet(), false)
+                new UnusualBetViewModel{CustomerId = 1, IsUnusual = true, HistoricalBets = new List<SettledBet>()},
+                new UnusualBetViewModel{CustomerId = 2, IsUnusual = false, HistoricalBets = new List<SettledBet>()},
             });
             
             var controller = new HomeController(betService, unusualBetDetector);
 
             // Action
             var result = controller.Index() as ViewResult;
-            var model = result.Model as IEnumerable<Tuple<SettledBet, bool>>;
+            var model = result.Model as IEnumerable<UnusualBetViewModel>;
 
             // Assert
             Assert.IsNotNull(result);

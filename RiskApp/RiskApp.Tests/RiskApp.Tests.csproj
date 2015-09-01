@@ -53,8 +53,13 @@
   <ItemGroup>
     <Compile Include="Controllers\HomeControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UnusualBetDetectorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RiskApp.Core.Data\RiskApp.Core.Data.csproj">
+      <Project>{50fdd3e9-ca63-49ac-a0f4-6f624c5a9afc}</Project>
+      <Name>RiskApp.Core.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RiskApp.Core\RiskApp.Core.csproj">
       <Project>{bed8d8ad-ba43-4a9b-b8ba-4a8d2187d8f2}</Project>
       <Name>RiskApp.Core</Name>
@@ -65,6 +70,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\RiskApp\App_Data\Settled.csv">
+      <Link>Settled.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\RiskApp\App_Data\Unsettled.csv">
+      <Link>Unsettled.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
