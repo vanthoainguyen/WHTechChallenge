@@ -5,7 +5,7 @@ Simply compile and run the web app
 
 - Home/Index to show customers with unusual wining rate
 - Home/Risk to show risky bets
-- 
+
 
 # Found issues:
 - RiskyBetDetectorTests.cs has wrong test method name because of copy&paste
